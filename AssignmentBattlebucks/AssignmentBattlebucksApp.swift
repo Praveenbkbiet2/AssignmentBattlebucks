@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct AssignmentBattlebucksApp: App {
+    @StateObject private var vm = PostsViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(vm)
         }
     }
 }
